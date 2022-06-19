@@ -15,7 +15,7 @@ The rules of the game are very simple. The players move in turns. Akshat won gol
 
 Assume that both players play optimally. Who will win the game?
 
-[Link to CodeForces](https://codeforces.com/problemset/problem/1/A)
+[Link to CodeForces](https://codeforces.com/problemset/problem/451/A)
 
 ## Input
 
