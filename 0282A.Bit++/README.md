@@ -1,0 +1,159 @@
+# 282A. Bit++
+
+## Problem
+
+The classic programming language of Bitland is Bit++. This language is so peculiar and complicated.
+
+The language is that peculiar as it has exactly one variable, called x. Also, there are two operations:
+
+Operation ++ increases the value of variable x by 1.
+Operation -- decreases the value of variable x by 1.
+A statement in language Bit++ is a sequence, consisting of exactly one operation and one variable x. The statement is written without spaces, that is, it can only contain characters "+", "-", "X". Executing a statement means applying the operation it contains.
+
+A programme in Bit++ is a sequence of statements, each of them needs to be executed. Executing a programme means executing all the statements it contains.
+
+You're given a programme in language Bit++. The initial value of x is 0. Execute the programme and find its final value (the value of the variable when this programme is executed).
+
+[Link to CodeForces](https://codeforces.com/problemset/problem/4/A)
+
+## Input
+
+The first line contains a single integer $n$ ($1 \leq n \leq 150$) — the number of statements in the programme.
+
+Next $n$ lines contain a statement each. Each statement contains exactly one operation (++ or --) and exactly one variable $x$ (denoted as letter «X»). Thus, there
+are no empty statements. The operation and the variable can be written in any order.
+
+## Output
+
+Print a single integer — the final value of $x$.
+
+## Examples
+
+### Input
+
+```
+1
+++X
+```
+
+### Output
+
+```
+1
+```
+
+### Input
+
+```
+2
+X++
+--X
+```
+
+### Output
+
+```
+0
+```
+
+## Constraints
+
+  - Time limit per test: 1 second
+  - Memory limit per test: 256 megabytes
+  - Input: standard input
+  - Output: standard output
+
+## Solutions
+
+### GNU C++17 7.3.0
+
+|  Problem  |    Lang   |  Verdict | Time  | Memory |
+|:---------:|:---------:|:--------:|:-----:|:------:|
+| 282A - 21 | GNU C++17 | Accepted | 15 ms |  8 KB  |
+
+[Link to source code](solution.cpp)
+
+```c++
+#include <iostream>
+#include <string>
+
+
+void solution() {
+    int cmd_count = 0;
+    std::cin >> cmd_count;
+
+    std::string cmd;
+    int sum = 0;
+    for (int cmd_index = 0; cmd_index < cmd_count; ++cmd_index) {
+        std::cin >> cmd;
+        sum += (*cmd.begin() == '+' || *cmd.rbegin() == '+') ? 1 : -1;
+    }
+
+    std::cout << sum << '\n';
+}
+
+
+void setup() {
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(NULL);
+}
+
+
+int main() {
+    setup();
+    solution();
+}
+```
+
+### Go 1.17.5
+
+|  Problem  |    Lang   |  Verdict | Time  | Memory |
+|:---------:|:---------:|:--------:|:-----:|:------:|
+| 282A - 21 |    Go     | Accepted | 31 ms |  8 KB  |
+
+[Link to source code](solution.go)
+
+```go
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
+
+var reader *bufio.Reader = bufio.NewReader(os.Stdin)
+var writer *bufio.Writer = bufio.NewWriter(os.Stdout)
+
+func Fprintf(format string, x ...interface{}) {
+	fmt.Fprintf(writer, format, x...)
+}
+
+func Fscanf(format string, x ...interface{}) {
+	fmt.Fscanf(reader, format, x...)
+}
+
+func Solution() {
+	var cmdCount int
+	Fscanf("%d\n", &cmdCount)
+
+	sum := 0
+
+	var cmd string
+	for cmdIndex := 0; cmdIndex < cmdCount; cmdIndex++ {
+		Fscanf("%s\n", &cmd)
+		if cmd[0] == '+' || cmd[len(cmd)-1] == '+' {
+			sum++
+		} else {
+			sum--
+		}
+	}
+
+	Fprintf("%d\n", sum)
+}
+
+func main() {
+	Solution()
+	writer.Flush()
+}
+```
