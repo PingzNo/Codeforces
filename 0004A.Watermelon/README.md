@@ -110,6 +110,27 @@ namespace Codeforces
 }
 ```
 
+### Python 3.8.10
+
+| Problem |    Lang   |  Verdict | Time  | Memory |
+|:-------:|:---------:|:--------:|:-----:|:------:|
+|   4A-8  | Python 3  | Accepted | 92 ms |  0 KB  |
+
+[Link to source code](solution.py)
+
+```python
+def solution():
+	weight = int(input())
+	if weight > 2 and weight % 2 == 0:
+		print("YES")
+	else:
+		print("No")
+
+
+if __name__ == "__main__":
+	solution()
+```
+
 ### Go 1.17.5
 
 | Problem |    Lang   |  Verdict | Time  | Memory |
