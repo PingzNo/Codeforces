@@ -39,6 +39,27 @@ Write the needed number of flagstones.
 
 ## Solutions
 
+### Python 3.8.10
+
+| Problem |    Lang   |  Verdict | Time  | Memory |
+|:-------:|:---------:|:--------:|:-----:|:------:|
+|   1A-10 |  Python 3 | Accepted | 46 ms |  0 KB  |
+
+[Link to source code](solution.py)
+
+```python
+def solution():
+	height, width, size = [int(x) for x in input().split()]
+	height_ratio = height // size if height % size == 0 else height // size + 1
+	width_ratio = width // size if width % size == 0 else width // size + 1
+	area = height_ratio * width_ratio
+	print(area)
+
+
+if __name__ == "__main__":
+	solution()
+```
+
 ### GNU C++17 7.3.0
 
 | Problem |    Lang   |  Verdict | Time  | Memory |
