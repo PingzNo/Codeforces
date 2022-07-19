@@ -140,6 +140,30 @@ namespace Codeforces
 }
 ```
 
+### Python 3.8.10
+
+| Problem |    Lang   |  Verdict | Time  | Memory |
+|:-------:|:---------:|:--------:|:-----:|:------:|
+|  71A-14 |  Python 3 | Accepted | 46 ms |  0 KB  |
+
+[Link to source code](solution.py)
+
+```python
+def solution():
+	case_count = int(input())
+
+	for _ in range(case_count):
+		word = input()
+		if len(word) <= 10:
+			print(word)
+		else:
+			print(f"{word[0]}{len(word) - 2}{word[-1]}")
+
+
+if __name__ == "__main__":
+	solution()
+```
+
 ### Go 1.17.5
 
 | Problem |    Lang   |  Verdict | Time  | Memory |
