@@ -6,10 +6,10 @@ You are given a positive integer $n$, it is guaranteed that $n$ is even (i.e. di
 
 You want to construct the array $a$ of length $n$ such that:
 
-  - The first $\frac{n}{2}$ elements of $a$ are even (divisible by 2);
-  - The second $\frac{n}{2}$ elements of $a$ are odd (not divisible by 2);
+  - The first $n/2$ elements of $a$ are even (divisible by 2);
+  - The second $n/2$ elements of $a$ are odd (not divisible by 2);
   - All elements of $a$ are distinct and positive;
-  - The sum of the first half equals to the sum of the second half $(\sum_{i=1}^{\frac{n}{2}}a_i=\sum_{i=\frac{n}{2}+1}^{n}a_i$.
+  - The sum of the first half equals to the sum of the second half ($\sum_{i=1}^{n/2}a_i=\sum_{i=n/2+1}^{n}a_i$).
 
 If there are multiple answers, you can print any. It is not guaranteed that the answer exists.
 
