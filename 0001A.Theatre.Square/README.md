@@ -30,14 +30,23 @@ Write the needed number of flagstones.
 4
 ```
 
-## Constraints
+## Analysis
+
+The key to solving this problem is checking if the square height or width is an even number or an odd one. As it is illustrated in the figure below, if
+the square height or width is an even number, then one can place the flagstone to precisely fit the square along that axis (solid lines). In the case that the square height or
+width is an odd number; exactly half of the last flagstones will be outside the square along the axis (dashed lines). However, no matter which case it is, the
+total number of flagstones used will be equal to the one in the case of even height and width.
+
+![Illustration](1A.png)
+
+## Solutions
+
+### Constraints
 
   - Time limit per test: 1 second
   - Memory limit per test: 256 megabytes
   - Input: standard input
   - Output: standard output
-
-## Solutions
 
 ### Python 3.8.10
 
