@@ -22,7 +22,6 @@ The first line contains an integer $n$ ($1 \leq n \leq 100$). Each of th
 
 Print $n$ lines. The $i$-th line should contain the result of replacing of the $i$-th word from the input data.
 
-
 ## Examples
 
 ### Input
@@ -44,14 +43,22 @@ i18n
 p43s
 ```
 
-## Constraints
+## Analysis
+
+The way to solve this problem is straightforward, by keeping the first and last characters of the input string and outputting the number of characters for the
+rest of the string in the center, if the string length is strictly larger than 10. Otherwise, output the input string as it is. The whole process can be expressed as
+the illustration below.
+
+![Illustration](illustration.png)
+
+## Solutions
+
+### Constraints
 
   - Time limit per test: 1 second
   - Memory limit per test: 256 megabytes
   - Input: standard input
   - Output: standard output
-
-## Solutions
 
 ### GNU C++17 7.3.0
 
