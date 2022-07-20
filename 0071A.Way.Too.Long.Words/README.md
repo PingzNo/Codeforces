@@ -46,8 +46,7 @@ p43s
 ## Analysis
 
 The way to solve this problem is straightforward, by keeping the first and last characters of the input string and outputting the number of characters for the
-rest of the string in the center, if the string length is strictly larger than 10. Otherwise, output the input string as it is. The whole process can be expressed as
-the illustration below.
+rest of the string in the center, if the string length is strictly larger than 10. Otherwise, output the input string as it is. The entire process can be expressed as an illustration below.
 
 ![Illustration](illustration.png)
 
