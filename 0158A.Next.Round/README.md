@@ -2,7 +2,7 @@
 
 ## Problem
 
-"Contestant who earns a score equal to or greater than the k-th place finisher's score will advance to the next round, as long as the contestant earns a positive score..." — an excerpt from contest rules.
+"Contestant who earns a score equal to or greater than the $k$-th place finisher's score will advance to the next round, as long as the contestant earns a positive score..." — an excerpt from contest rules.
 
 A total of $n$ participants took part in the contest ($n \geq k$), and you already know their scores. Calculate how many participants will advance to the next round.
 
@@ -20,27 +20,27 @@ Output the number of participants who advance to the next round.
 
 ## Examples
 
-### Input
+### Input 1
 
 ```
 8 5
 10 9 8 7 7 7 5 5
 ```
 
-### Output
+### Output 1
 
 ```
 6
 ```
 
-### Input
+### Input 2
 
 ```
 4 2
 0 0 0 0
 ```
 
-### Output
+### Output 2
 
 ```
 0
@@ -122,6 +122,36 @@ int main() {
     setup();
     solution();
 }
+```
+
+### Python 3.8.10
+
+| Problem |    Lang   |  Verdict | Time  | Memory |
+|:-------:|:---------:|:--------:|:-----:|:------:|
+| 158A-12 |     Go    | Accepted | 92 ms |  0 KB  |
+
+[Link to source code](solution.py)
+
+```python
+def solution():
+	participant_count, candidate_count = [int(x) for x in input().split()]
+	scores = [int(x) for x in input().split()]
+
+	participant_index = candidate_count - 1
+	threshold = scores[participant_index]
+	if scores[participant_index] > 0:
+		while participant_index < participant_count and scores[participant_index] == threshold:
+			participant_index += 1
+	else:
+		while participant_index >= 0 and scores[participant_index] == 0:
+			participant_index -= 1
+		participant_index += 1
+
+	print(participant_index)
+
+
+if __name__ == "__main__":
+	solution()
 ```
 
 ### Go 1.17.5
