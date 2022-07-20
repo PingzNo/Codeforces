@@ -36,6 +36,12 @@ YES
 
 For example, the boys can divide the watermelon into two parts of 2 and 6 kilos respectively (another variant — two parts of 4 and 4 kilos).
 
+## Analysis
+
+The way to solve this problem is straightforward. It only demands checking if the watermelon's weight is an even number. In the case of yes, the watermelon
+can be evenly divided into two equal halves, otherwise not. However, it is an exception to gain two kilos because one kilo is not even with respect to the
+division requirement.
+
 ## Constraints
 
   - Time limit per test: 1 second
