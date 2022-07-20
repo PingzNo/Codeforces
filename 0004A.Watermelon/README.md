@@ -42,14 +42,14 @@ The way to solve this problem is straightforward. It only demands checking if th
 can be evenly divided into two equal halves, otherwise not. However, it is an exception to gain two kilos because one kilo is not even with respect to the
 division requirement.
 
-## Constraints
+## Solutions
+
+### Constraints
 
   - Time limit per test: 1 second
   - Memory limit per test: 64 megabytes
   - Input: standard input
   - Output: standard output
-
-## Solutions
 
 ### GNU C++17 7.3.0
 
