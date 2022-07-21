@@ -22,38 +22,44 @@ Output one number — the maximal number of dominoes, which can be placed.
 
 ## Examples
 
-### Input
+### Input 1
 
 ```
 2 4
 ```
 
-### Output
+### Output 1
 
 ```
 4
 ```
 
-### Input
+### Input 2
 
 ```
 3 3
 ```
 
-### Output
+### Output 2
 
 ```
 4
 ```
 
-## Constraints
+## Analysis
+
+The approach to solving this problem is similar to the one of [1A Theatre Square](https://blog.zhao.no/day-4-1a-theatre-square). The tricky part is that one
+domino must be placed entirely inside the board, according to the problem statement. As a result, the dominos on the last row or column with odd board height or
+width should be rotated to meet this requirement. This part is different from the problem [1A Theatre Square](https://blog.zhao.no/day-4-1a-theatre-square).
+
+## Solutions
+
+### Constraints
 
   - Time limit per test: 2 seconds
   - Memory limit per test: 256 megabytes
   - Input: standard input
   - Output: standard output
-
-## Solutions
 
 ### GNU C++17 7.3.0
 
@@ -148,6 +154,38 @@ namespace Codeforces
         }
     }
 }
+```
+
+### Python 3.8.10
+
+| Problem |    Lang   |  Verdict | Time   |   Memory  |
+|:-------:|:---------:|:--------:|:------:|:---------:|
+|  50A-14 |     Go    | Accepted | 92 ms  |    0 KB   |
+
+[Link to source code](solution.py)
+
+```python
+def solution():
+    height, width = [int(x) for x in input().split()]
+
+    half_height = height // 2
+    half_width = width // 2
+
+    result = 2 * half_height * half_width
+    if height % 2 == 1 and width % 2 == 1:
+        result += half_height + half_width
+
+    elif height % 2 == 1 and width % 2 == 0:
+        result += half_width
+
+    elif height % 2 == 0 and width % 2 == 1:
+        result += half_height
+
+    print(result)
+
+
+if __name__ == "__main__":
+    solution()
 ```
 
 ### Go 1.17.5
