@@ -4,17 +4,17 @@
 
 The classic programming language of Bitland is Bit++. This language is so peculiar and complicated.
 
-The language is that peculiar as it has exactly one variable, called x. Also, there are two operations:
+The language is that peculiar as it has exactly one variable, called $x$. Also, there are two operations:
 
-Operation ++ increases the value of variable x by 1.
-Operation -- decreases the value of variable x by 1.
-A statement in language Bit++ is a sequence, consisting of exactly one operation and one variable x. The statement is written without spaces, that is, it can only contain characters "+", "-", "X". Executing a statement means applying the operation it contains.
+Operation ++ increases the value of variable $x$ by 1.
+Operation -- decreases the value of variable $x$ by 1.
+A statement in language Bit++ is a sequence, consisting of exactly one operation and one variable $x$. The statement is written without spaces, that is, it can only contain characters "+", "-", "X". Executing a statement means applying the operation it contains.
 
 A programme in Bit++ is a sequence of statements, each of them needs to be executed. Executing a programme means executing all the statements it contains.
 
-You're given a programme in language Bit++. The initial value of x is 0. Execute the programme and find its final value (the value of the variable when this programme is executed).
+You're given a programme in language Bit++. The initial value of $x$ is 0. Execute the programme and find its final value (the value of the variable when this programme is executed).
 
-[Link to CodeForces](https://codeforces.com/problemset/problem/4/A)
+[Link to CodeForces](https://codeforces.com/problemset/problem/282/A)
 
 ## Input
 
@@ -27,22 +27,27 @@ are no empty statements. The operation and the variable can be written in any or
 
 Print a single integer — the final value of $x$.
 
+## Analysis
+
+The solution to this problem is just a simulation of the computational process. It is only necessary to check the first character of the input string to
+determine whether it is a plus or minus command rather than checking the entire string.
+
 ## Examples
 
-### Input
+### Input 1
 
 ```
 1
 ++X
 ```
 
-### Output
+### Output 1
 
 ```
 1
 ```
 
-### Input
+### Input 2
 
 ```
 2
@@ -50,11 +55,13 @@ X++
 --X
 ```
 
-### Output
+### Output 2
 
 ```
 0
 ```
+
+## Solutions
 
 ## Constraints
 
@@ -62,8 +69,6 @@ X++
   - Memory limit per test: 256 megabytes
   - Input: standard input
   - Output: standard output
-
-## Solutions
 
 ### GNU C++17 7.3.0
 
@@ -103,6 +108,33 @@ int main() {
     setup();
     solution();
 }
+```
+
+### Python 3.8.10
+
+|  Problem  |    Lang   |  Verdict | Time  | Memory |
+|:---------:|:---------:|:--------:|:-----:|:------:|
+| 282A - 21 |   Python  | Accepted | 46 ms |  0 KB  |
+
+[Link to source code](solution.py)
+
+```python
+def solution():
+    cmd_count = int(input())
+
+    sum = 0
+    for _ in range(cmd_count):
+        cmd = input()
+        if cmd[0] == '+' or cmd[-1] == '+':
+            sum += 1
+        else:
+            sum -= 1
+
+    print(sum)
+
+
+if __name__ == "__main__":
+    solution()
 ```
 
 ### Go 1.17.5
