@@ -21,7 +21,9 @@ Print a single integer — the minimum number of moves needed to make the matrix
 
 ## Examples
 
-### Input
+### Input 1
+
+[Link to file](input_0.txt)
 
 ```
 0 0 0 0 0
@@ -31,13 +33,19 @@ Print a single integer — the minimum number of moves needed to make the matrix
 0 0 0 0 0
 ```
 
-### Output
+### Output 1
+
+[Link to file](expected_0.txt)
+
 
 ```
 3
 ```
 
-### Input
+### Input 2
+
+[Link to file](input_1.txt)
+
 
 ```
 0 0 0 0 0
@@ -47,7 +55,10 @@ Print a single integer — the minimum number of moves needed to make the matrix
 0 0 0 0 0
 ```
 
-### Output
+### Output 2
+
+[Link to file](expected_1.txt)
+
 
 ```
 1
