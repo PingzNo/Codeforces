@@ -53,51 +53,41 @@ Print a single integer — the minimum number of moves needed to make the matrix
 1
 ```
 
-## Constraints
+## Analysis
+
+The solution to this problem is searching for the number one in the matrix and calculating its chessboard distance to the matrix center.
+
+## Solutions
+
+### Constraints
 
   - Time limit per test: 2 seconds
   - Memory limit per test: 256 megabytes
   - Input: standard input
   - Output: standard output
 
-## Solutions
-
-### GNU C++17 7.3.0
+### Python 3.8.10
 
 | Problem  |    Lang   |  Verdict | Time  | Memory |
 |:--------:|:---------:|:--------:|:-----:|:------:|
-| 263A - 8 | GNU C++17 | Accepted | 30 ms |  4 KB  |
+| 263A - 8 |   Python  | Accepted | 92 ms |  0 KB  |
 
-[Link to source code](solution.cpp)
+[Link to source code](solution.py)
 
-```c++
-#include <iostream>
-
-
-void solution() {
-    int number = 0;
-    for (int row_index = 0; row_index < 5; ++row_index) {
-        for (int col_index = 0; col_index < 5; ++col_index) {
-            std::cin >> number;
-            if (number == 1) {
-                std::cout << abs(row_index - 2) + abs(col_index - 2) << '\n';
-                return;
-            }
-        }
-    }
-}
+```python
+def solution():
+    for row_index in range(5):
+        row = [int(x) for x in input().split()]
+        for col_index in range(5):
+            if row[col_index] == 1:
+                row_distance = int(abs(row_index - 2))
+                col_distance = int(abs(col_index - 2))
+                print(row_distance + col_distance)
+                return
 
 
-void setup() {
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(NULL);
-}
-
-
-int main() {
-    setup();
-    solution();
-}
+if __name__ == "__main__":
+	solution()
 ```
 
 ### Go 1.17.5
