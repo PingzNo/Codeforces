@@ -18,40 +18,52 @@ If the first string is less than the second one, print "-1". If the second strin
 
 ## Examples
 
-### Input
+### Input 1
+
+[Link to file](https://github.com/PingzNo/Codeforces/blob/master/0112A.Petya.and.Strings/input_0.txt)
 
 ```
 aaaa
 aaaA
 ```
 
-### Output
+### Output 1
+
+[Link to file](https://github.com/PingzNo/Codeforces/blob/master/0112A.Petya.and.Strings/expected_0.txt)
 
 ```
 0
 ```
 
-### Input
+### Input 2
+
+[Link to file](https://github.com/PingzNo/Codeforces/blob/master/0112A.Petya.and.Strings/input_1.txt)
 
 ```
 abs
 Abz
 ```
 
-### Output
+### Output 2
+
+[Link to file](https://github.com/PingzNo/Codeforces/blob/master/0112A.Petya.and.Strings/expected_1.txt)
 
 ```
 -1
 ```
 
-### Input
+### Input 3
+
+[Link to file](https://github.com/PingzNo/Codeforces/blob/master/0112A.Petya.and.Strings/input_2.txt)
 
 ```
 abcdefg
 AbCdEfF
 ```
 
-### Output
+### Output 3
+
+[Link to file](https://github.com/PingzNo/Codeforces/blob/master/0112A.Petya.and.Strings/expected_2.txt)
 
 ```
 1
@@ -63,14 +75,18 @@ If you want more formal information about the lexicographical order (also known 
 
 [http://en.wikipedia.org/wiki/Lexicographical_order](http://en.wikipedia.org/wiki/Lexicographical_order)
 
-## Constraints
+## Analysis
+
+The solution to this problem is a straightforward implementation of a string comparison operator by ignoring the character cases.
+
+## Solutions
+
+### Constraints
 
   - Time limit per test: 2 seconds
   - Memory limit per test: 256 megabytes
   - Input: standard input
   - Output: standard output
-
-## Solutions
 
 ### GNU C++17 7.3.0
 
@@ -122,6 +138,36 @@ int main() {
     setup();
     solution();
 }
+```
+
+### Python 3.8.10
+
+|  Problem  |    Lang   |  Verdict |  Time | Memory |
+|:---------:|:---------:|:--------:|:-----:|:------:|
+| 112A - 11 |   Python  | Accepted | 92 ms |  0 KB  |
+
+[Link to source code](solution.py)
+
+```python
+def solution():
+    first = input().upper()
+    second = input().upper()
+
+    result = 0
+    for i, c in enumerate(first):
+        if c < second[i]:
+            result = -1
+            break
+
+        if c > second[i]:
+            result = 1
+            break
+
+    print(result)
+
+
+if __name__ == "__main__":
+    solution()
 ```
 
 ### C# Mono 6.8
