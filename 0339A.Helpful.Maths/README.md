@@ -20,50 +20,94 @@ Print the new sum that Xenia can count.
 
 ## Examples
 
-### Input
+### Input 1
+
+[Link to file](input_0.txt)
 
 ```
 3+2+1
 ```
 
-### Output
+### Output 1
+
+[Link to file](expected_0.txt)
 
 ```
 1+2+3
 ```
 
-### Input
+### Input 2
+
+[Link to file](input_1.txt)
 
 ```
 1+1+3+1+3
 ```
 
-### Output
+### Output 2
+
+[Link to file](expected_1.txt)
 
 ```
 1+1+1+3+3
 ```
 
-### Input
+### Input 3
+
+[Link to file](input_2.txt)
 
 ```
 2
 ```
 
-### Output
+### Output 3
+
+[Link to file](expected_2.txt)
 
 ```
 2
 ```
 
-## Constraints
+## Solutions
+
+### Constraints
 
   - Time limit per test: 2 seconds
   - Memory limit per test: 256 megabytes
   - Input: standard input
   - Output: standard output
 
-## Solutions
+### Python 3.8.10
+
+| Problem |    Lang   |  Verdict | Time  | Memory |
+|:-------:|:---------:|:--------:|:-----:|:------:|
+| 339A-11 |   Python  | Accepted | 92 ms |  0 KB  |
+
+[Link to source code](solution.py)
+
+```python
+def solution():
+    line = input()
+
+    counts = [0, 0, 0]
+    for c in line:
+        if c != "+":
+            counts[int(c) - 1] += 1
+
+    is_first = True
+    for i in range(3):
+        for count in range(counts[i]):
+            if is_first:
+                is_first = False
+            else:
+                print("+", end="")
+            print(i + 1, end="")
+    print("")
+
+
+if __name__ == "__main__":
+    solution()
+```
 
 ### Go 1.17.5
 
