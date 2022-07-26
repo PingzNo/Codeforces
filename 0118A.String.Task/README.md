@@ -25,50 +25,50 @@ Print the resulting string. It is guaranteed that this string is not empty.
 
 ## Examples
 
-### Input
+### Input 1
 
 ```
 tour
 ```
 
-### Output
+### Output 1
 
 ```
 .t.r
 ```
 
-### Input
+### Input 2
 
 ```
 Codeforces
 ```
 
-### Output
+### Output 2
 
 ```
 .c.d.f.r.c.s
 ```
 
-### Input
+### Input 3
 
 ```
 aBAcAba
 ```
 
-### Output
+### Output 3
 
 ```
 .b.c.b
 ```
 
-## Constraints
+## Solutions
+
+### Constraints
 
   - Time limit per test: 2 seconds
   - Memory limit per test: 256 megabytes
   - Input: standard input
   - Output: standard output
-
-## Solutions
 
 ### GNU C++17 7.3.0
 
@@ -177,4 +177,27 @@ func main() {
 	Solution()
 	writer.Flush()
 }
+```
+
+### Python 3.8.10
+
+|  Problem  |    Lang   |  Verdict |  Time | Memory |
+|:---------:|:---------:|:--------:|:-----:|:------:|
+| 118A - 13 |  Python   | Accepted | 92 ms |  0 KB  |
+
+[Link to source code](solution.py)
+
+```python
+def solution():
+    for c in input().lower():
+        if c == 'a' or c == 'o' or c == 'y' or c == 'e' or c == 'u' or c == 'i':
+            continue
+
+        print(f".{c}", end="")
+
+    print()
+
+
+if __name__ == "__main__":
+    solution()
 ```
