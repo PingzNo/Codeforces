@@ -12,7 +12,7 @@ Vowels are letters "A", "O", "Y", "E", "U", "I", and the rest are consonants. Th
 
 Help Petya cope with this easy task.
 
-[Link to CodeForces](https://codeforces.com/problemset/problem/4/A)
+[Link to CodeForces](https://codeforces.com/problemset/problem/118/A)
 
 ## Input
 
