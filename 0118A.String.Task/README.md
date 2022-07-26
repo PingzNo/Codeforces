@@ -27,11 +27,15 @@ Print the resulting string. It is guaranteed that this string is not empty.
 
 ### Input 1
 
+[Link to file](input_0.txt)
+
 ```
 tour
 ```
 
 ### Output 1
+
+[Link to file](expected_0.txt)
 
 ```
 .t.r
@@ -39,11 +43,15 @@ tour
 
 ### Input 2
 
+[Link to file](input_1.txt)
+
 ```
 Codeforces
 ```
 
 ### Output 2
+
+[Link to file](expected_1.txt)
 
 ```
 .c.d.f.r.c.s
@@ -51,11 +59,15 @@ Codeforces
 
 ### Input 3
 
+[Link to file](input_2.txt)
+
 ```
 aBAcAba
 ```
 
 ### Output 3
+
+[Link to file](expected_2.txt)
 
 ```
 .b.c.b
