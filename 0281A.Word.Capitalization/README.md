@@ -18,38 +18,64 @@ Output the given word after capitalization.
 
 ## Examples
 
-### Input
+### Input 1
+
+[Link to file](input_0.txt)
 
 ```
 ApPLe
 ```
 
-### Output
+### Output 1
+
+[Link to file](expected_0.txt)
 
 ```
 ApPLe
 ```
 
-### Input
+### Input 2
+
+[Link to file](input_1.txt)
 
 ```
 konjac
 ```
 
-### Output
+### Output 2
+
+[Link to file](expected_1.txt)
 
 ```
 Konjac
 ```
 
-## Constraints
+## Solutions
+
+### Constraints
 
   - Time limit per test: 2 seconds
   - Memory limit per test: 256 megabytes
   - Input: standard input
   - Output: standard output
 
-## Solutions
+### Python 3.8.10
+
+| Problem |    Lang   |  Verdict | Time  | Memory |
+|:-------:|:---------:|:--------:|:-----:|:------:|
+| 281A-22 |   Python  | Accepted | 62 ms |  0 KB  |
+
+[Link to source code](solution.py)
+
+```python
+def solution():
+    word = input()
+    print(f"{word[0].upper()}{word[1:]}")
+
+
+if __name__ == "__main__":
+    solution()
+```
 
 ### Go 1.17.5
 
